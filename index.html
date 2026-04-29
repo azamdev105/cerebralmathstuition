@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cerebral Maths Tuition — Singapore Secondary Math Specialist</title>
+  <meta name="description" content="Premium secondary maths tuition in Singapore by NUS-trained specialist Keith Lee. Trusted by parents from Hwa Chong, Nanyang Girls', CHIJ SNGS and 15+ tier-1 schools.">
+  <meta property="og:title" content="Cerebral Maths Tuition — Singapore Secondary Math Specialist">
+  <meta property="og:description" content="Premium secondary maths tuition in Singapore by NUS-trained specialist Keith Lee. Trusted by parents from Hwa Chong, Nanyang Girls', CHIJ SNGS and 15+ tier-1 schools.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="">
+  <meta name="theme-color" content="#FAF7F2">
+  <link rel="preload" href="fonts/fraunces-v38-latin/fraunces-v38-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-v20-latin/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Fraunces';
+      src: url('fonts/fraunces-v38-latin/fraunces-v38-latin-regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Fraunces';
+      src: url('fonts/fraunces-v38-latin/fraunces-v38-latin-600.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: url('fonts/inter-v20-latin/inter-v20-latin-regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: url('fonts/inter-v20-latin/inter-v20-latin-500.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #FAF7F2;
+      --bg-alt: #EFE9DC;
+      --border: #D8D2C5;
+      --text: #1A1814;
+      --text-muted: #5C564B;
+      --brand: #1E4D40;
+      --accent: #B8721A;
+      --accent-hover: #9A5F15;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--brand);
+      outline-offset: 3px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 4vw, 2rem);
+    }
+
+    /* ── Header & Nav ── */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: var(--bg);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 200ms ease;
+    }
+
+    header.scrolled {
+      box-shadow: 0 2px 16px rgba(26, 24, 20, 0.08);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: clamp(4rem, 8vw, 4.5rem);
+      max-width: 1200px;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 4vw, 2rem);
+    }
+
+    .wordmark {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      text-decoration: none;
+    }
+
+    .wordmark-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    .wordmark-tagline {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.6875rem;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      text-transform: lowercase;
+    }
+
+    /* ── CTA Button ── */
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      background-color: var(--accent);
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      line-height: 1;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 0.75rem 1.25rem;
+      transition: background-color 200ms ease;
+      white-space: nowrap;
+    }
+
+    .btn-cta:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .btn-cta svg {
+      width: 1.1em;
+      height: 1.1em;
+      flex-shrink: 0;
+    }
+
+    .btn-cta--lg {
+      padding: 1rem 1.75rem;
+      font-size: 1rem;
+    }
+
+    /* ── Hero ── */
+
+    .hero {
+      padding-top: clamp(3rem, 8vh, 5rem);
+      padding-bottom: clamp(4rem, 10vh, 7rem);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: clamp(0.75rem, 2vw, 1rem);
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(2rem, 6vw, 3.75rem);
+      line-height: 1.07;
+      color: var(--text);
+      margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      line-height: 1.5;
+      color: var(--text-muted);
+      max-width: 38ch;
+      margin-bottom: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    /* ── Trust Strip ── */
+
+    .trust-strip {
+      margin-top: 2.5rem;
+    }
+
+    .trust-label {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .trust-schools {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .dot {
+      color: var(--border);
+      margin-inline: 0.3em;
+    }
+
+    /* ── Desktop ── */
+
+    @media (min-width: 768px) {
+      .hero-content {
+        max-width: 780px;
+      }
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Main">
+      <div class="nav-container">
+        <a href="/" class="wordmark" aria-label="Cerebral Maths Tuition — home">
+          <span class="wordmark-name">Cerebral Maths Tuition</span>
+          <span class="wordmark-tagline">Mindful Mathematics</span>
+        </a>
+        <a href="https://wa.me/6587878967" class="btn-cta" target="_blank" rel="noopener" aria-label="WhatsApp Keith — opens WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Keith
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Singapore Secondary Maths Specialist</p>
+          <h1 class="hero-headline">From <span class="accent">F9 to A1</span>. The track record of Singapore's specialist math tutor.</h1>
+          <p class="hero-sub">NUS Mathematics. Ex-MOE. Trusted by parents from Hwa Chong, Nanyang Girls', CHIJ SNGS, Anderson, and 15+ secondary schools.</p>
+          <a href="https://wa.me/6587878967" class="btn-cta btn-cta--lg" target="_blank" rel="noopener" aria-label="WhatsApp Keith — opens WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Keith
+          </a>
+          <div class="trust-strip">
+            <p class="trust-label">Trusted by parents from</p>
+            <p class="trust-schools">Hwa Chong<span class="dot">•</span>Nanyang Girls'<span class="dot">•</span>CHIJ SNGS<span class="dot">•</span>Anderson<span class="dot">•</span>Nan Hua<span class="dot">•</span>Kranji</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

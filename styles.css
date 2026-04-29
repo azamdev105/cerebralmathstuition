@@ -1,0 +1,239 @@
+/*
+  styles.css — source reference
+  All CSS is inlined in index.html <style> for Lighthouse performance.
+  This file is not linked from index.html. Edit here, then sync to the <style> block.
+*/
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url('fonts/fraunces-v38-latin/fraunces-v38-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('fonts/fraunces-v38-latin/fraunces-v38-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/inter-v20-latin/inter-v20-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/inter-v20-latin/inter-v20-latin-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #FAF7F2;
+  --bg-alt: #EFE9DC;
+  --border: #D8D2C5;
+  --text: #1A1814;
+  --text-muted: #5C564B;
+  --brand: #1E4D40;
+  --accent: #B8721A;
+  --accent-hover: #9A5F15;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2rem);
+}
+
+/* ── Header & Nav ── */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 200ms ease;
+}
+
+header.scrolled {
+  box-shadow: 0 2px 16px rgba(26, 24, 20, 0.08);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: clamp(4rem, 8vw, 4.5rem);
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2rem);
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-decoration: none;
+}
+
+.wordmark-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.wordmark-tagline {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  text-transform: lowercase;
+}
+
+/* ── CTA Button ── */
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  background-color: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  transition: background-color 200ms ease;
+  white-space: nowrap;
+}
+
+.btn-cta:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-cta svg {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+}
+
+.btn-cta--lg {
+  padding: 1rem 1.75rem;
+  font-size: 1rem;
+}
+
+/* ── Hero ── */
+
+.hero {
+  padding-top: clamp(3rem, 8vh, 5rem);
+  padding-bottom: clamp(4rem, 10vh, 7rem);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 6vw, 3.75rem);
+  line-height: 1.07;
+  color: var(--text);
+  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--text-muted);
+  max-width: 38ch;
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
+}
+
+/* ── Trust Strip ── */
+
+.trust-strip {
+  margin-top: 2.5rem;
+}
+
+.trust-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.trust-schools {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.dot {
+  color: var(--border);
+  margin-inline: 0.3em;
+}
+
+/* ── Desktop ── */
+
+@media (min-width: 768px) {
+  .hero-content {
+    max-width: 780px;
+  }
+}
