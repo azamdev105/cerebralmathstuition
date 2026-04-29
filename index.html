@@ -59,6 +59,7 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
+        animation-delay: 0ms !important;
         transition-duration: 0.01ms !important;
       }
     }
@@ -311,6 +312,89 @@
       transform-origin: left center;
       animation: accentUnderline 800ms ease-out 1100ms forwards;
     }
+
+    /* ── Problem Section ── */
+
+    .section-problem {
+      background-color: var(--bg-alt);
+      padding-top: clamp(4rem, 10vh, 7rem);
+      padding-bottom: clamp(4rem, 10vh, 7rem);
+    }
+
+    .problem-container {
+      max-width: 680px;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 4vw, 2rem);
+    }
+
+    .problem-eyebrow {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: clamp(0.75rem, 2vw, 1rem);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .problem-headline {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .text-accent {
+      color: var(--accent);
+    }
+
+    .problem-body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: clamp(1rem, 2.2vw, 1.125rem);
+      line-height: 1.65;
+      color: var(--text-muted);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .problem-body + .problem-body {
+      margin-top: 1.5rem;
+    }
+
+    .problem-transition {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      line-height: 1.4;
+      color: var(--text);
+      margin-top: 2.5rem;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Scroll reveal ── */
+
+    @keyframes sectionReveal {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .revealed {
+      animation: sectionReveal 600ms ease-out backwards;
+    }
   </style>
   <script src="script.js" defer></script>
 </head>
@@ -347,6 +431,16 @@
             <p class="trust-schools">Hwa Chong<span class="dot">•</span>Nanyang Girls'<span class="dot">•</span>CHIJ SNGS<span class="dot">•</span>Anderson<span class="dot">•</span>Nan Hua<span class="dot">•</span>Kranji</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section-problem" aria-labelledby="problem-heading">
+      <div class="problem-container">
+        <p class="problem-eyebrow" data-reveal="0">The Real Problem</p>
+        <h2 class="problem-headline" id="problem-heading" data-reveal="100">Your child isn't the problem. The <span class="text-accent">system</span> is.</h2>
+        <p class="problem-body" data-reveal="200">The MOE curriculum is severely time-constrained. Teachers are forced to follow a standard pace, which encourages rote memorization over real understanding. Most tuition centres copy the same approach — information-dumping sessions that produce short-term marks but no real grasp of the subject.</p>
+        <p class="problem-body" data-reveal="300">Your child isn't lazy or slow. They've been taught to memorize, not to think. That's why grades stagnate. That's why confidence drops. And that's why drilling more practice papers doesn't fix it.</p>
+        <p class="problem-transition" data-reveal="450">Real Maths education looks different. Here's what 13 years of teaching it has produced.</p>
       </div>
     </section>
   </main>
