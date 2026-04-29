@@ -525,6 +525,117 @@
         gap: clamp(1.5rem, 3vw, 3rem);
       }
     }
+
+    /* ── Methodology Section ── */
+
+    .section-methodology {
+      background-color: var(--bg-alt);
+      padding-top: clamp(5rem, 12vh, 8rem);
+      padding-bottom: clamp(5rem, 12vh, 8rem);
+    }
+
+    .methodology-container {
+      max-width: 860px;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 4vw, 2rem);
+    }
+
+    .method-eyebrow {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: clamp(0.75rem, 2vw, 1rem);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .method-headline {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(2rem, 5.5vw, 3rem);
+      line-height: 1.05;
+      color: var(--text);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .method-sub {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      line-height: 1.45;
+      color: var(--text);
+      max-width: 42ch;
+      margin-top: 1.5rem;
+      margin-bottom: clamp(3.5rem, 7vh, 5rem);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .pillar {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .pillar + .pillar {
+      margin-top: clamp(3rem, 6vh, 4.5rem);
+    }
+
+    .pillar-number {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2.25rem, 7vw, 3rem);
+      line-height: 1;
+      color: rgba(184, 114, 26, 0.6);
+      margin-bottom: 0.75rem;
+    }
+
+    .pillar-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.375rem, 3vw, 1.625rem);
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.875rem;
+    }
+
+    .pillar-body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: clamp(1rem, 2.2vw, 1.0625rem);
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+
+    .method-coda {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      line-height: 1.4;
+      color: var(--text);
+      max-width: 52ch;
+      margin-top: clamp(4rem, 8vh, 6rem);
+      margin-inline: auto;
+      text-align: center;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 768px) {
+      .pillar {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: clamp(2rem, 4vw, 3rem);
+        align-items: start;
+      }
+
+      .pillar-number {
+        margin-bottom: 0;
+      }
+    }
   </style>
   <script src="script.js" defer></script>
 </head>
@@ -602,6 +713,48 @@
           </div>
         </div>
         <p class="track-coda" data-reveal="900">Behind every number is a methodology. Built over 13 years. Refined for one purpose: making maths actually click.</p>
+      </div>
+    </section>
+
+    <section class="section-methodology" aria-labelledby="methodology-heading">
+      <div class="methodology-container">
+        <p class="method-eyebrow" data-reveal="0">The Methodology</p>
+        <h2 class="method-headline" id="methodology-heading" data-reveal="100">Mindful Mathematics.</h2>
+        <p class="method-sub" data-reveal="200">Not a method copied from a textbook. A way of teaching maths built over thirteen years — refined for students who don't just want marks, but real understanding.</p>
+
+        <div class="pillar" data-reveal="400">
+          <div class="pillar-number">01</div>
+          <div class="pillar-content">
+            <p class="pillar-title">A roadmap, not a syllabus.</p>
+            <p class="pillar-body">Most tutoring follows the school's topic-by-topic order. Mindful Mathematics doesn't. Each student gets a development roadmap — they see how every topic connects, what skills they're building, and where they are in their own journey. Maths becomes a structure, not a checklist.</p>
+          </div>
+        </div>
+
+        <div class="pillar" data-reveal="550">
+          <div class="pillar-number">02</div>
+          <div class="pillar-content">
+            <p class="pillar-title">Understanding, not memorisation.</p>
+            <p class="pillar-body">Rote learning produces short-term marks and long-term confusion. In every lesson, the goal is comprehension first — students absorb the ideas behind the formulae, not just the formulae themselves. Once a concept is understood, it doesn't need to be re-memorised every term.</p>
+          </div>
+        </div>
+
+        <div class="pillar" data-reveal="700">
+          <div class="pillar-number">03</div>
+          <div class="pillar-content">
+            <p class="pillar-title">The language of maths.</p>
+            <p class="pillar-body">Maths has its own grammar. Students who struggle aren't bad at numbers — they've never been taught to read the language. Lessons focus on translation: turning word problems into equations, equations into solutions, solutions into clear explanations. This is where confidence comes from.</p>
+          </div>
+        </div>
+
+        <div class="pillar" data-reveal="850">
+          <div class="pillar-number">04</div>
+          <div class="pillar-content">
+            <p class="pillar-title">An art-form with a framework.</p>
+            <p class="pillar-body">Done well, maths is creative. There's elegance in a clean solution, efficiency in choosing the right method, and even artistry in how a problem is laid out on the page. Students learn methods not found in textbooks — methods built specifically to make hard problems feel approachable.</p>
+          </div>
+        </div>
+
+        <p class="method-coda" data-reveal="1050">This is what thirteen years of teaching looks like in practice. The students themselves can speak to what it produces.</p>
       </div>
     </section>
   </main>

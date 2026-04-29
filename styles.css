@@ -516,3 +516,114 @@ header.scrolled {
     gap: clamp(1.5rem, 3vw, 3rem);
   }
 }
+
+/* ── Methodology Section ── */
+
+.section-methodology {
+  background-color: var(--bg-alt);
+  padding-top: clamp(5rem, 12vh, 8rem);
+  padding-bottom: clamp(5rem, 12vh, 8rem);
+}
+
+.methodology-container {
+  max-width: 860px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2rem);
+}
+
+.method-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.method-headline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 5.5vw, 3rem);
+  line-height: 1.05;
+  color: var(--text);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.method-sub {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  line-height: 1.45;
+  color: var(--text);
+  max-width: 42ch;
+  margin-top: 1.5rem;
+  margin-bottom: clamp(3.5rem, 7vh, 5rem);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pillar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pillar + .pillar {
+  margin-top: clamp(3rem, 6vh, 4.5rem);
+}
+
+.pillar-number {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.25rem, 7vw, 3rem);
+  line-height: 1;
+  color: rgba(184, 114, 26, 0.6);
+  margin-bottom: 0.75rem;
+}
+
+.pillar-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.375rem, 3vw, 1.625rem);
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 0.875rem;
+}
+
+.pillar-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1rem, 2.2vw, 1.0625rem);
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.method-coda {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  line-height: 1.4;
+  color: var(--text);
+  max-width: 52ch;
+  margin-top: clamp(4rem, 8vh, 6rem);
+  margin-inline: auto;
+  text-align: center;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .pillar {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: clamp(2rem, 4vw, 3rem);
+    align-items: start;
+  }
+
+  .pillar-number {
+    margin-bottom: 0;
+  }
+}
