@@ -46,6 +46,14 @@
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+/* ── Reduced-motion safety net ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -80,11 +88,11 @@ header {
   z-index: 50;
   background-color: var(--bg);
   border-bottom: 1px solid var(--border);
-  transition: box-shadow 200ms ease;
+  transition: box-shadow 250ms ease-out;
 }
 
 header.scrolled {
-  box-shadow: 0 2px 16px rgba(26, 24, 20, 0.08);
+  box-shadow: 0 1px 0 var(--border), 0 4px 12px rgba(26, 24, 20, 0.04);
 }
 
 .nav-container {
@@ -136,12 +144,16 @@ header.scrolled {
   text-decoration: none;
   border-radius: 8px;
   padding: 0.75rem 1.25rem;
-  transition: background-color 200ms ease;
+  transition: background-color 200ms ease-out, transform 200ms ease-out, box-shadow 200ms ease-out;
   white-space: nowrap;
 }
 
 .btn-cta:hover {
   background-color: var(--accent-hover);
+}
+
+.btn-cta:active {
+  transform: scale(0.98);
 }
 
 .btn-cta svg {
@@ -153,6 +165,9 @@ header.scrolled {
 .btn-cta--lg {
   padding: 1rem 1.75rem;
   font-size: 1rem;
+  opacity: 1;
+  transform: translateY(0);
+  animation: heroFadeUp 500ms ease-out 240ms backwards;
 }
 
 /* ── Hero ── */
@@ -176,6 +191,9 @@ header.scrolled {
   text-transform: uppercase;
   color: var(--brand);
   margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  opacity: 1;
+  transform: translateY(0);
+  animation: heroFadeUp 500ms ease-out 0ms backwards;
 }
 
 .hero-headline {
@@ -185,10 +203,15 @@ header.scrolled {
   line-height: 1.07;
   color: var(--text);
   margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+  opacity: 1;
+  transform: translateY(0);
+  animation: heroFadeUp 500ms ease-out 80ms backwards;
 }
 
 .accent {
   color: var(--accent);
+  position: relative;
+  display: inline-block;
 }
 
 .hero-sub {
@@ -199,6 +222,9 @@ header.scrolled {
   color: var(--text-muted);
   max-width: 38ch;
   margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  opacity: 1;
+  transform: translateY(0);
+  animation: heroFadeUp 500ms ease-out 160ms backwards;
 }
 
 /* ── Trust Strip ── */
@@ -215,6 +241,9 @@ header.scrolled {
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 0.75rem;
+  opacity: 1;
+  transform: translateY(0);
+  animation: heroFadeUp 500ms ease-out 320ms backwards;
 }
 
 .trust-schools {
@@ -223,6 +252,9 @@ header.scrolled {
   font-size: 0.8rem;
   color: var(--text-muted);
   line-height: 1.8;
+  opacity: 1;
+  transform: translateY(0);
+  animation: heroFadeUp 500ms ease-out 400ms backwards;
 }
 
 .dot {
@@ -236,4 +268,37 @@ header.scrolled {
   .hero-content {
     max-width: 780px;
   }
+}
+
+/* ── Keyframes ── */
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes accentUnderline {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Grade jump underline — the single signature moment */
+.accent::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: accentUnderline 800ms ease-out 1100ms forwards;
 }
