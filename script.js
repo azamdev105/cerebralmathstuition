@@ -33,4 +33,20 @@
     }, { threshold: 0.15 });
     revealEls.forEach(function (el) { io.observe(el); });
   }
+
+  var supportGrid = document.querySelector('.support-grid');
+  if ('IntersectionObserver' in window && supportGrid) {
+    var gridIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var cards = e.target.querySelectorAll('.card-support');
+        cards.forEach(function (card, i) {
+          card.style.animationDelay = (i * 80) + 'ms';
+          card.classList.add('revealed');
+        });
+        gridIo.unobserve(e.target);
+      });
+    }, { threshold: 0.1 });
+    gridIo.observe(supportGrid);
+  }
 }());

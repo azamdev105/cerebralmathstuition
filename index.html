@@ -636,10 +636,348 @@
         margin-bottom: 0;
       }
     }
+
+    /* ── Proof Section ── */
+
+    .section-proof {
+      background-color: var(--bg);
+      padding-top: clamp(5rem, 12vh, 8rem);
+      padding-bottom: clamp(5rem, 12vh, 8rem);
+    }
+
+    .proof-container {
+      max-width: 1200px;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 4vw, 2rem);
+    }
+
+    .proof-eyebrow {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: clamp(0.75rem, 2vw, 1rem);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .proof-headline {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.875rem, 5vw, 2.75rem);
+      line-height: 1.1;
+      color: var(--text);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .proof-sub {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: clamp(1rem, 2.2vw, 1.125rem);
+      line-height: 1.5;
+      color: var(--text-muted);
+      max-width: 52ch;
+      margin-top: 1rem;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .google-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: clamp(2rem, 4vh, 3rem);
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .google-strip-rating {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+      line-height: 1;
+      color: var(--text);
+    }
+
+    .google-strip-count {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .stars {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .featured-cards {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(1.5rem, 3vh, 2rem);
+      margin-top: clamp(3rem, 6vh, 5rem);
+    }
+
+    .card-featured {
+      background-color: var(--bg-alt);
+      border-radius: 12px;
+      padding: clamp(1.75rem, 4vw, 2.5rem);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: var(--brand);
+      color: #fff;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .reviewer-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .reviewer-name {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .reviewer-school {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    .google-attr {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      margin-left: auto;
+    }
+
+    .grade-pill {
+      display: inline-block;
+      background-color: rgba(184, 114, 26, 0.12);
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.875rem;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      white-space: nowrap;
+    }
+
+    .card-stars {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .card-quote-featured {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.0625rem, 2.4vw, 1.25rem);
+      line-height: 1.55;
+      color: var(--text);
+    }
+
+    .card-quote-featured::before {
+      content: '\201C';
+      font-size: 1.4em;
+      color: rgba(184, 114, 26, 0.5);
+      line-height: 0;
+      vertical-align: -0.15em;
+      margin-right: 0.05em;
+    }
+
+    .card-quote-featured::after {
+      content: '\201D';
+      font-size: 1.4em;
+      color: rgba(184, 114, 26, 0.5);
+      line-height: 0;
+      vertical-align: -0.15em;
+      margin-left: 0.05em;
+    }
+
+    .card-quote-support {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: clamp(0.9375rem, 2vw, 1rem);
+      line-height: 1.55;
+      color: var(--text);
+    }
+
+    .card-quote-support::before {
+      content: '\201C';
+      font-size: 1.4em;
+      color: rgba(184, 114, 26, 0.5);
+      line-height: 0;
+      vertical-align: -0.15em;
+      margin-right: 0.05em;
+    }
+
+    .card-quote-support::after {
+      content: '\201D';
+      font-size: 1.4em;
+      color: rgba(184, 114, 26, 0.5);
+      line-height: 0;
+      vertical-align: -0.15em;
+      margin-left: 0.05em;
+    }
+
+    .card-date {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 1.25rem;
+    }
+
+    .support-grid {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(1rem, 2.5vh, 1.5rem);
+      margin-top: clamp(2rem, 5vh, 3.5rem);
+    }
+
+    .card-support {
+      background-color: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: clamp(1.5rem, 3vw, 1.75rem);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-support .avatar {
+      width: 40px;
+      height: 40px;
+      font-size: 1.125rem;
+    }
+
+    .card-support .reviewer-name {
+      font-size: 0.9375rem;
+    }
+
+    .card-support .reviewer-school {
+      font-size: 0.8125rem;
+    }
+
+    .card-support .card-header {
+      margin-bottom: 1rem;
+    }
+
+    .card-support .card-stars {
+      margin-bottom: 0.875rem;
+    }
+
+    .card-support .card-date {
+      margin-top: 1rem;
+    }
+
+    .google-all-link-wrap {
+      text-align: center;
+      margin-top: clamp(2.5rem, 5vh, 3.5rem);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .google-all-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      background-color: transparent;
+      border: 1.5px solid var(--brand);
+      border-radius: 999px;
+      padding: 0.75rem 1.5rem;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.9375rem;
+      color: var(--brand);
+      text-decoration: none;
+      transition: background-color 200ms ease-out;
+    }
+
+    .google-all-link:hover {
+      background-color: rgba(30, 77, 64, 0.08);
+    }
+
+    .proof-coda {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      line-height: 1.4;
+      color: var(--text);
+      max-width: 52ch;
+      margin-top: clamp(3rem, 6vh, 4rem);
+      margin-inline: auto;
+      text-align: center;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 768px) {
+      .support-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(1rem, 2.5vw, 1.5rem);
+        align-items: stretch;
+      }
+    }
   </style>
   <script src="script.js" defer></script>
 </head>
 <body>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="icon-google-g" viewBox="0 0 24 24">
+      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#F4B400"/>
+    </symbol>
+  </svg>
 
   <header>
     <nav aria-label="Main">
@@ -755,6 +1093,256 @@
         </div>
 
         <p class="method-coda" data-reveal="1050">This is what thirteen years of teaching looks like in practice. The students themselves can speak to what it produces.</p>
+      </div>
+    </section>
+
+    <section class="section-proof" aria-labelledby="proof-heading">
+      <div class="proof-container">
+        <p class="proof-eyebrow" data-reveal="0">Verified Proof</p>
+        <h2 class="proof-headline" id="proof-heading" data-reveal="100">What students and parents actually say.</h2>
+        <p class="proof-sub" data-reveal="200">Reviews pulled directly from Google. Real names, real schools, real grade improvements.</p>
+
+        <div class="google-strip" data-reveal="350">
+          <svg width="28" height="28" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
+          <span class="stars" aria-label="5 out of 5 stars" role="img">
+            <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+          </span>
+          <span class="google-strip-rating">5.0</span>
+          <span class="google-strip-count">Based on 21 verified Google Reviews</span>
+        </div>
+
+        <div class="featured-cards">
+
+          <div class="card-featured" data-reveal="500">
+            <div class="card-header">
+              <div class="avatar" aria-hidden="true">A</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Anonymous student</span>
+                <span class="reviewer-school">Student, Kranji Secondary School</span>
+              </div>
+              <span class="google-attr" aria-label="Verified Google Review">
+                <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
+                Google Review
+              </span>
+            </div>
+            <span class="grade-pill">F9 &#x2192; B3 in 2 months &middot; A-Math</span>
+            <div class="card-stars" aria-label="5 out of 5 stars" role="img">
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            </div>
+            <p class="card-quote-featured">Teacher Keith is an amazing tutor. The most patient, caring, and knowledgeable in his field. He can break down and explain any type of question and allow me to easily understand and solve the questions. His method of breaking down complex questions into simple, fundamental mathematical concepts has helped me so much in my math and amath results. I got an F9 for my Amath prelim, but got B3 for O Levels, a 6 grade improvement in less than 2 months! 100% would engage him again if i were a helpless sec 3😞. highly recommended, quality tuition, 100% worth.</p>
+            <p class="card-date">Posted a year ago · Verified Google Review</p>
+          </div>
+
+          <div class="card-featured" data-reveal="650">
+            <div class="card-header">
+              <div class="avatar" aria-hidden="true">D</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Daniel Hee</span>
+                <span class="reviewer-school">Student, Hwa Chong Institution</span>
+              </div>
+              <span class="google-attr" aria-label="Verified Google Review">
+                <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
+                Google Review
+              </span>
+            </div>
+            <span class="grade-pill">A1 in both E-Math and A-Math</span>
+            <div class="card-stars" aria-label="5 out of 5 stars" role="img">
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            </div>
+            <p class="card-quote-featured">Mr Lee is the perfect case of what a exemplary educator is. In his two years of honing me towards academic excellence, he wholeheartedly devoted himself into the role of not just a teacher, but a friend. He has not only made me into a better student but a better person. In his tenacious effort to help his students, he never forgets to be accommodating to their skill levels, adjusting his content and teaching speed to perfect the progress of his students, making them learn more efficiently. He too always puts his students first, never hesitating to offer his assistance when asked for, even when it is exam season, late at night, and with lots of requests for help incoming, he never fails to satisfy each student's queries. This has helped me to acheive A1s in both Emath and Amath.</p>
+            <p class="card-date">Posted 2 months ago · Verified Google Review</p>
+          </div>
+
+          <div class="card-featured" data-reveal="800">
+            <div class="card-header">
+              <div class="avatar" aria-hidden="true">N</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">N</span>
+                <span class="reviewer-school">Student, Anderson Secondary School</span>
+              </div>
+              <span class="google-attr" aria-label="Verified Google Review">
+                <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
+                Google Review
+              </span>
+            </div>
+            <span class="grade-pill">F9 &#x2192; A2 (A-Math) &middot; D7 &#x2192; A1 (E-Math)</span>
+            <div class="card-stars" aria-label="5 out of 5 stars" role="img">
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            </div>
+            <p class="card-quote-featured">Teacher was very efficient in getting to the root of the student's problem and targeting weakness in certain topics, providing excellent notes in said topics. Workload is sufficient, aptly preparing student. Is very patient through out the process and makes lessons interesting to engross student in the lessons and feel more comfortable in approaching math problems.</p>
+            <p class="card-date">Posted a year ago · Verified Google Review</p>
+          </div>
+
+        </div>
+
+        <div class="support-grid">
+
+          <div class="card-support">
+            <div class="card-header">
+              <div class="avatar" aria-hidden="true">Y</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Yitong Li</span>
+                <span class="reviewer-school">Student, Unity Secondary School</span>
+              </div>
+              <span class="google-attr" aria-label="Verified Google Review">
+                <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
+                Google Review
+              </span>
+            </div>
+            <div class="card-stars" aria-label="5 out of 5 stars" role="img">
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            </div>
+            <p class="card-quote-support">mr keith is a very patient and encouraging teacher. he was able to bring my amath from a D7 to a B3 for o lvls and keep my emath constant at an A2 in a span of 7 months 😵‍💫. his teaching is easy to understand and his methods are easy to grasp. he's also able to adjust to each student's pace and tweak his lessons accordingly. he's also easy to communicate with and replies promptly to messages 😄. he's an amazing teacher and is the reason i did well for o lvls 🙂‍↕️🙂‍↕️</p>
+            <p class="card-date">Posted 3 months ago · Verified Google Review</p>
+          </div>
+
+          <div class="card-support">
+            <div class="card-header">
+              <div class="avatar" aria-hidden="true">A</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Alfons Chew</span>
+                <span class="reviewer-school">Student, Nan Hua High School</span>
+              </div>
+              <span class="google-attr" aria-label="Verified Google Review">
+                <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
+                Google Review
+              </span>
+            </div>
+            <div class="card-stars" aria-label="5 out of 5 stars" role="img">
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            </div>
+            <p class="card-quote-support">Mr Lee is an amazing tuition teacher who is very diligent and patient. He allowed my E and A Math to improve from C6s to A1s by meticulously breaking down complex topics into easily understandable info. He is very easy to talk to and cares deeply for students, tailoring lessons to each students learning style.</p>
+            <p class="card-date">Posted 2 months ago · Verified Google Review</p>
+          </div>
+
+          <div class="card-support">
+            <div class="card-header">
+              <div class="avatar" aria-hidden="true">J</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Jeanne Oo</span>
+                <span class="reviewer-school">Parent of student at Kranji Secondary School</span>
+              </div>
+              <span class="google-attr" aria-label="Verified Google Review">
+                <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
+                Google Review
+              </span>
+            </div>
+            <div class="card-stars" aria-label="5 out of 5 stars" role="img">
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            </div>
+            <p class="card-quote-support">Keith is an engaging math tuition teacher who truly excels in connecting with students. His ability to explain complex mathematical concepts in a relatable way was impressive. My boy is able to grasp the material more effectively under his guidance. What stood out most was his willingness to assist with any questions, even outside of lessons, via WhatsApp. This teacher's dedication and teaching style made my boy's learning experience enjoyable and effective.</p>
+            <p class="card-date">Posted 2 years ago · Verified Google Review</p>
+          </div>
+
+          <div class="card-support">
+            <div class="card-header">
+              <div class="avatar" aria-hidden="true">J</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Jade</span>
+                <span class="reviewer-school">Student, CHIJ St. Nicholas Girls' School</span>
+              </div>
+              <span class="google-attr" aria-label="Verified Google Review">
+                <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
+                Google Review
+              </span>
+            </div>
+            <div class="card-stars" aria-label="5 out of 5 stars" role="img">
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            </div>
+            <p class="card-quote-support">Tutor Keith is the best tutor I've encountered so far. Having him solve the questions alongside me had helped me immensely, as when I struggled with a question, he could showcase his thought process on how he arrived at the correct answer/method. This allowed me to learn not only how to simplify long word equations, but also how to grasp and apply the correct methods. With Tutor Keith's help, I jumped from B3 in Math and B4 in A Math in Sec 3 to As in both subjects.</p>
+            <p class="card-date">Posted a year ago · Verified Google Review</p>
+          </div>
+
+          <div class="card-support">
+            <div class="card-header">
+              <div class="avatar" aria-hidden="true">J</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Jasline Ng</span>
+                <span class="reviewer-school">Parent of student at Nan Hua High School</span>
+              </div>
+              <span class="google-attr" aria-label="Verified Google Review">
+                <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
+                Google Review
+              </span>
+            </div>
+            <div class="card-stars" aria-label="5 out of 5 stars" role="img">
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            </div>
+            <p class="card-quote-support">Result speaks for itself. My Son has improved his math from F to A1 in a short while after engaging keith. He is very patient and willing to put in extra hours to help him catch-up and build his confidence in math subject. I would highly recommend Keith to anyone.</p>
+            <p class="card-date">Posted 2 years ago · Verified Google Review</p>
+          </div>
+
+          <div class="card-support">
+            <div class="card-header">
+              <div class="avatar" aria-hidden="true">R</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Ruiting Zhang</span>
+                <span class="reviewer-school">Student, Nanyang Girls' High School</span>
+              </div>
+              <span class="google-attr" aria-label="Verified Google Review">
+                <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
+                Google Review
+              </span>
+            </div>
+            <div class="card-stars" aria-label="5 out of 5 stars" role="img">
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+              <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-star"/></svg>
+            </div>
+            <p class="card-quote-support">The best 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 my math (AMath and EMath) improved a lot after only a few months. The tutor also explains really well and focuses on topics that the student is weak in.</p>
+            <p class="card-date">Posted 2 years ago · Verified Google Review</p>
+          </div>
+
+        </div>
+
+        <div class="google-all-link-wrap" data-reveal="0">
+          <a href="https://www.google.com/maps/place/Cerebral+Maths+Tuition/@1.3789246,103.6608369,12z/data=!4m8!3m7!1s0x835376eb63f53e03:0xc3082e89375f0898!8m2!3d1.3787544!4d103.7432381!9m1!1b1!16s%2Fg%2F11sw14ytmf" class="google-all-link" target="_blank" rel="noopener" aria-label="Read all 21 Google Reviews — opens Google Maps">
+            <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
+            Read all 21 reviews on Google
+            <span aria-hidden="true">&#x2192;</span>
+          </a>
+        </div>
+
+        <p class="proof-coda" data-reveal="100">Twenty-one verified five-star reviews. Zero exceptions. The same pattern, repeated across every cohort since 2012.</p>
+
       </div>
     </section>
   </main>
