@@ -229,39 +229,52 @@ header.scrolled {
   animation: heroFadeUp 500ms ease-out 160ms backwards;
 }
 
-/* ── Trust Strip ── */
+/* ── Hero Rating ── */
 
-.trust-strip {
-  margin-top: 2.5rem;
-}
-
-.trust-label {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 0.75rem;
+.hero-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  margin-top: clamp(2rem, 4vh, 2.75rem);
   opacity: 1;
   transform: translateY(0);
   animation: heroFadeUp 500ms ease-out 320ms backwards;
 }
 
-.trust-schools {
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  line-height: 1.8;
-  opacity: 1;
-  transform: translateY(0);
-  animation: heroFadeUp 500ms ease-out 400ms backwards;
+.hero-rating-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
 }
 
-.dot {
-  color: var(--border);
-  margin-inline: 0.3em;
+.hero-rating-text {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.google-wordmark {
+  font-weight: 500;
+}
+
+.hero-rating-sep {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  flex-shrink: 0;
+}
+
+.hero-rating-count {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 /* ── Desktop ── */
@@ -385,7 +398,7 @@ header.scrolled {
 }
 
 .revealed {
-  animation: sectionReveal 600ms ease-out backwards;
+  animation: sectionReveal 800ms ease-out backwards;
 }
 
 /* ── Track Record Section ── */
