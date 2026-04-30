@@ -114,7 +114,7 @@ header.scrolled {
 }
 
 .nav-logo img {
-  height: clamp(40px, 6vh, 52px);
+  height: clamp(64px, 8vh, 80px);
   width: auto;
   display: block;
   transition: opacity 200ms ease-out;
