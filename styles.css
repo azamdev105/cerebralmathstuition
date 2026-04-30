@@ -147,6 +147,9 @@ header.scrolled {
   .wordmark-tagline {
     font-size: 0.5rem;
   }
+  .btn-cta {
+    font-size: 0.7rem;
+  }
 }
 
 /* ── CTA Button ── */
