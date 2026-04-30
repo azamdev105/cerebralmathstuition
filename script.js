@@ -49,4 +49,38 @@
     }, { threshold: 0.1 });
     gridIo.observe(supportGrid);
   }
+
+  var faqList = document.querySelector('.faq-list');
+  if (faqList) {
+    var currentOpen = null;
+    faqList.addEventListener('click', function (e) {
+      var btn = e.target.closest('.faq-question');
+      if (!btn) return;
+      var answer = document.getElementById(btn.getAttribute('aria-controls'));
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      if (currentOpen && currentOpen !== btn) {
+        var prevAnswer = document.getElementById(currentOpen.getAttribute('aria-controls'));
+        currentOpen.setAttribute('aria-expanded', 'false');
+        prevAnswer.setAttribute('aria-hidden', 'true');
+      }
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      answer.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+      currentOpen = isOpen ? null : btn;
+    });
+
+    if ('IntersectionObserver' in window) {
+      var faqIo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          var items = e.target.querySelectorAll('.faq-item');
+          items.forEach(function (item, i) {
+            item.style.animationDelay = (i * 80) + 'ms';
+            item.classList.add('revealed');
+          });
+          faqIo.unobserve(e.target);
+        });
+      }, { threshold: 0.1 });
+      faqIo.observe(faqList);
+    }
+  }
 }());
