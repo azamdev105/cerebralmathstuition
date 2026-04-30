@@ -1162,6 +1162,140 @@
         margin-inline: 0;
       }
     }
+
+    /* ── Process Section ── */
+
+    .section-process {
+      background-color: var(--bg);
+      padding-top: clamp(5rem, 12vh, 8rem);
+      padding-bottom: clamp(5rem, 12vh, 8rem);
+    }
+
+    .process-container {
+      max-width: 860px;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 4vw, 2rem);
+    }
+
+    .process-eyebrow {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: clamp(0.75rem, 2vw, 1rem);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .process-headline {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.875rem, 5vw, 2.75rem);
+      line-height: 1.1;
+      color: var(--text);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .process-break {
+      display: none;
+    }
+
+    .process-sub {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: clamp(1rem, 2.2vw, 1.125rem);
+      line-height: 1.5;
+      color: var(--text-muted);
+      max-width: 52ch;
+      margin-top: 1rem;
+      margin-bottom: clamp(3.5rem, 7vh, 5rem);
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .step {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .step + .step {
+      margin-top: clamp(3rem, 6vh, 4.5rem);
+    }
+
+    .step-number {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2.25rem, 7vw, 3rem);
+      line-height: 1;
+      color: rgba(184, 114, 26, 0.6);
+      margin-bottom: 0.75rem;
+    }
+
+    .step-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.375rem, 3vw, 1.625rem);
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.875rem;
+    }
+
+    .step-body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: clamp(1rem, 2.2vw, 1.0625rem);
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+
+    .process-reassurance {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: clamp(0.9375rem, 2vw, 1rem);
+      font-style: italic;
+      line-height: 1.55;
+      color: var(--text-muted);
+      max-width: 52ch;
+      margin-top: clamp(3.5rem, 7vh, 5rem);
+      margin-inline: auto;
+      text-align: center;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .process-coda {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      line-height: 1.4;
+      color: var(--text);
+      max-width: 52ch;
+      margin-top: clamp(2.5rem, 5vh, 3.5rem);
+      margin-inline: auto;
+      text-align: center;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 768px) {
+      .process-break {
+        display: inline;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: clamp(2rem, 4vw, 3rem);
+        align-items: start;
+      }
+
+      .step-number {
+        margin-bottom: 0;
+      }
+    }
   </style>
   <script src="script.js" defer></script>
 </head>
@@ -1614,6 +1748,42 @@
         </div>
 
         <p class="about-coda" data-reveal="1250">Now you know who's behind the methodology. The next step is starting a conversation.</p>
+      </div>
+    </section>
+
+    <section class="section-process" aria-labelledby="process-heading">
+      <div class="process-container">
+        <p class="process-eyebrow" data-reveal="0">How It Works</p>
+        <h2 class="process-headline" id="process-heading" data-reveal="100">Three steps.<br class="process-break"> No pressure.</h2>
+        <p class="process-sub" data-reveal="200">Most parents message expecting a sales pitch. What they get is a conversation about whether this is even the right fit for their child.</p>
+
+        <div class="step" data-reveal="400">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <p class="step-title">Send a WhatsApp message.</p>
+            <p class="step-body">A quick note about your child &#x2014; current secondary level, current grades, what you've tried so far, and what you're hoping to change. No forms to fill out. No phone tag. Just a message, the same way you'd ask a friend for a recommendation.</p>
+          </div>
+        </div>
+
+        <div class="step" data-reveal="550">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <p class="step-title">Have a real conversation.</p>
+            <p class="step-body">Keith will reply personally &#x2014; usually within the same day. If 1-to-1 or the focus group fits better, you'll figure that out together on a call or over WhatsApp. If it turns out another tutor would be a better match for your child, he'll say so. The goal isn't to sign you up; it's to find the right fit.</p>
+          </div>
+        </div>
+
+        <div class="step" data-reveal="700">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <p class="step-title">Start when you're ready.</p>
+            <p class="step-body">Once you've decided, lessons begin. 1-to-1 happens at your home or online. Focus group sessions happen at the classroom in Bukit Batok. There's no contract, no minimum commitment, no upfront package. You pay for the lessons your child attends &#x2014; that's it.</p>
+          </div>
+        </div>
+
+        <p class="process-reassurance" data-reveal="900">If you're not sure yet, that's fine. Most parents aren't, on the first message.</p>
+
+        <p class="process-coda" data-reveal="1100">The next thing to know is what you'd actually be paying for.</p>
       </div>
     </section>
   </main>
