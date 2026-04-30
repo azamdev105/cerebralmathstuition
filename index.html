@@ -123,27 +123,42 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: clamp(5.5rem, 10vw, 6.5rem);
+      height: clamp(4rem, 8vw, 4.5rem);
       max-width: 1200px;
       margin-inline: auto;
       padding-inline: clamp(1.25rem, 4vw, 2rem);
     }
 
-    .nav-logo {
+    .wordmark {
       display: flex;
+      flex-direction: column;
       text-decoration: none;
       flex-shrink: 0;
-    }
-
-    .nav-logo img {
-      height: clamp(80px, 10vh, 96px);
-      width: auto;
-      display: block;
       transition: opacity 200ms ease-out;
     }
 
-    .nav-logo:hover img {
-      opacity: 0.85;
+    .wordmark:hover {
+      opacity: 0.75;
+    }
+
+    .wordmark-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1rem, 2.4vw, 1.25rem);
+      color: var(--brand);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .wordmark-tagline {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: clamp(0.6875rem, 1.4vw, 0.75rem);
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-top: 0.25rem;
     }
 
     /* ── CTA Button ── */
@@ -1872,8 +1887,9 @@
   <header>
     <nav aria-label="Main">
       <div class="nav-container">
-        <a href="/" class="nav-logo" aria-label="Cerebral Maths Tuition — home">
-          <img src="images/cerebral-maths-logo.png" alt="Cerebral Maths Tuition" width="120" height="80" decoding="async">
+        <a href="/" class="wordmark" aria-label="Cerebral Maths Tuition — home">
+          <span class="wordmark-name">Cerebral Maths Tuition</span>
+          <span class="wordmark-tagline">Mindful Mathematics</span>
         </a>
         <a href="https://wa.me/6587878967" class="btn-cta" target="_blank" rel="noopener"
           aria-label="WhatsApp Keith — opens WhatsApp">
