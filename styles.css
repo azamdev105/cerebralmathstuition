@@ -107,28 +107,21 @@ header.scrolled {
   padding-inline: clamp(1.25rem, 4vw, 2rem);
 }
 
-.wordmark {
+.nav-logo {
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
-.wordmark-name {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  line-height: 1.2;
-  color: var(--text);
+.nav-logo img {
+  height: clamp(40px, 6vh, 52px);
+  width: auto;
+  display: block;
+  transition: opacity 200ms ease-out;
 }
 
-.wordmark-tagline {
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 0.6875rem;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
-  text-transform: lowercase;
+.nav-logo:hover img {
+  opacity: 0.85;
 }
 
 /* ── CTA Button ── */
@@ -282,6 +275,8 @@ header.scrolled {
 @media (min-width: 768px) {
   .hero-content {
     max-width: 780px;
+    text-align: center;
+    align-items: center;
   }
 }
 
