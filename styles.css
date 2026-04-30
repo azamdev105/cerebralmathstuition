@@ -111,7 +111,8 @@ header.scrolled {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 0;
   transition: opacity 200ms ease-out;
 }
 
@@ -122,7 +123,7 @@ header.scrolled {
 .wordmark-name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1rem, 2.4vw, 1.25rem);
+  font-size: clamp(0.8125rem, 2.4vw, 1.25rem);
   color: var(--brand);
   line-height: 1.1;
   letter-spacing: -0.01em;
@@ -131,12 +132,21 @@ header.scrolled {
 .wordmark-tagline {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: clamp(0.6875rem, 1.4vw, 0.75rem);
+  font-size: clamp(0.5625rem, 1.4vw, 0.75rem);
   color: var(--text-muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   line-height: 1;
-  margin-top: 0.25rem;
+  margin-top: 0.125rem;
+}
+
+@media (max-width: 430px) {
+  .wordmark-name {
+    font-size: 0.5rem;
+  }
+  .wordmark-tagline {
+    font-size: 0.3rem;
+  }
 }
 
 /* ── CTA Button ── */
@@ -145,6 +155,7 @@ header.scrolled {
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
+  flex-shrink: 0;
   background-color: var(--accent);
   color: #fff;
   font-family: var(--font-body);
