@@ -488,6 +488,11 @@
       color: var(--text-muted);
     }
 
+    .stat-number-group {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
     .stat-label {
       font-family: var(--font-body);
       font-weight: 500;
@@ -1537,7 +1542,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: clamp(2rem, 4vw, 3rem);
-        align-items: stretch;
+        align-items: start;
       }
     }
 
@@ -1894,14 +1899,14 @@
         <h2 class="problem-headline" id="problem-heading" data-reveal="60">Your child isn't the problem. The <span class="text-accent">system</span> is.</h2>
         <p class="problem-body" data-reveal="120">The standard curriculum is severely time-constrained. Even good teachers are forced to follow a fixed pace, which encourages rote memorisation over real understanding. Most tuition centres copy the same approach — information-dumping sessions that produce short-term marks but no real grasp of the subject.</p>
         <p class="problem-body" data-reveal="180">Your child isn't lazy or slow. They've been taught to memorise, not to think. That's why grades stagnate. That's why confidence drops. And that's why drilling more practice papers doesn't fix it.</p>
-        <p class="problem-transition" data-reveal="320">Real Maths education looks different. Here's what 13 years of teaching it has produced.</p>
+        <p class="problem-transition" data-reveal="320">There is a different way to teach maths. The numbers below are what thirteen years of it have produced.</p>
       </div>
     </section>
 
     <section class="section-track-record" aria-labelledby="track-record-heading">
       <div class="track-record-container">
         <p class="track-eyebrow" data-reveal="0">The Track Record</p>
-        <h2 class="track-headline" id="track-record-heading" data-reveal="60">13 years. Hundreds of students.<br class="track-headline-break">One consistent pattern.</h2>
+        <h2 class="track-headline" id="track-record-heading" data-reveal="60">Thirteen years. Every cohort.<br class="track-headline-break">One consistent pattern.</h2>
         <p class="track-sub" data-reveal="120">Numbers that have held steady across cohorts, schools, and exam streams since 2012.</p>
         <div class="stat-grid">
           <div class="stat-block" data-reveal="260">
@@ -1910,12 +1915,12 @@
             <p class="stat-context">Across all students, all years, all secondary streams.</p>
           </div>
           <div class="stat-block" data-reveal="320">
-            <div class="stat-number">3<span class="stat-unit"> grades</span></div>
+            <div class="stat-number"><span class="stat-number-group">3<span class="stat-unit"> grades</span></span></div>
             <p class="stat-label">Average improvement</p>
             <p class="stat-context">Stable, sustained improvement within one year of starting.</p>
           </div>
           <div class="stat-block" data-reveal="380">
-            <div class="stat-number">5&#x2013;6<span class="stat-unit"> grades</span></div>
+            <div class="stat-number"><span class="stat-number-group">5&#x2013;6<span class="stat-unit"> grades</span></span></div>
             <p class="stat-label">For Sec 4 last-minute students</p>
             <p class="stat-context">Students starting in their final year have consistently jumped this far. Example: E8 to A2.</p>
           </div>
@@ -1925,7 +1930,7 @@
             <p class="stat-context">Since 2012. Not a single student or parent has discontinued tutelage.</p>
           </div>
         </div>
-        <p class="track-coda" data-reveal="640">Behind every number is a methodology. Built over 13 years. Refined for one purpose: making maths actually click.</p>
+        <p class="track-coda" data-reveal="640">Behind every number is a methodology. Built over thirteen years. Refined toward one purpose: real understanding, not just better marks.</p>
       </div>
     </section>
 
@@ -1947,7 +1952,7 @@
           <div class="pillar-number">02</div>
           <div class="pillar-content">
             <p class="pillar-title">Understanding, not memorisation.</p>
-            <p class="pillar-body">Rote learning produces short-term marks and long-term confusion. In every lesson, the goal is comprehension first — students absorb the ideas behind the formulae, not just the formulae themselves. Once a concept is understood, it doesn't need to be re-memorised every term.</p>
+            <p class="pillar-body">Rote learning produces short-term marks and compounding gaps. In every lesson, the goal is comprehension first — students absorb the ideas behind the formulae, not just the formulae themselves. Once a concept is understood, it doesn't need to be re-memorised every term.</p>
           </div>
         </div>
 
@@ -1974,8 +1979,8 @@
     <section class="section-proof" aria-labelledby="proof-heading">
       <div class="proof-container">
         <p class="proof-eyebrow" data-reveal="0">Verified Proof</p>
-        <h2 class="proof-headline" id="proof-heading" data-reveal="60">What students and parents actually say.</h2>
-        <p class="proof-sub" data-reveal="120">Reviews pulled directly from Google. Real names, real schools, real grade improvements.</p>
+        <h2 class="proof-headline" id="proof-heading" data-reveal="60">What students and parents say.</h2>
+        <p class="proof-sub" data-reveal="120">Reviews pulled directly from Google &#x2014; with the schools and grade outcomes attached.</p>
 
         <div class="google-strip" data-reveal="220">
           <svg width="28" height="28" aria-hidden="true" focusable="false"><use href="#icon-google-g"/></svg>
@@ -2216,7 +2221,7 @@
           </a>
         </div>
 
-        <p class="proof-coda" data-reveal="100">Twenty-one verified five-star reviews. Zero exceptions. The same pattern, repeated across every cohort since 2012.</p>
+        <p class="proof-coda" data-reveal="100">Twenty-one verified five-star reviews. The same pattern, repeated across every cohort since 2012.</p>
 
       </div>
     </section>
@@ -2234,7 +2239,7 @@
           </div>
 
           <div class="about-content">
-            <p class="about-bio" data-reveal="340">Maths was always something I wanted to share, not just teach. I ranked top in my cohort through school, scored full marks in major exams through to JC2, and developed my own methods along the way — not because I had to, but because the textbook approach never quite explained why things worked. Thirteen years later, those methods are what my students learn. Every lesson, my students leave with more confidence, sharper thinking, and a stronger interest in maths.</p>
+            <p class="about-bio" data-reveal="340">Maths was always something I wanted to share, not just teach. I ranked highest in my cohort through school, scored full marks in major exams through to JC2, and developed my own methods along the way — not because I had to, but because the textbook approach never quite explained why things worked. Thirteen years later, those methods are what my students learn. Every lesson, my students leave with more confidence, sharper thinking, and a stronger interest in maths.</p>
 
             <h3 class="about-section-heading" data-reveal="420">Education.</h3>
             <div class="credentials-list" data-reveal="480">
@@ -2264,7 +2269,7 @@
                 <span class="exp-years">Since 2012</span>
               </div>
               <div class="exp-row">
-                <span class="exp-role">Educational consultant</span>
+                <span class="exp-role">Textbook contributor</span>
                 <span class="exp-detail">Textbook publisher &#x2013; model solutions, answer key review, e-learning video production</span>
                 <span class="exp-years">2016&#x2013;2022</span>
               </div>
@@ -2288,7 +2293,7 @@
 
         </div>
 
-        <p class="about-coda" data-reveal="150">Now you know who's behind the methodology. The next step is starting a conversation.</p>
+        <p class="about-coda" data-reveal="150">That's the person behind the methodology. The next step is yours.</p>
       </div>
     </section>
 
@@ -2302,7 +2307,7 @@
           <div class="step-number">01</div>
           <div class="step-content">
             <p class="step-title">Send a WhatsApp message.</p>
-            <p class="step-body">A quick note about your child &#x2014; current secondary level, current grades, what you've tried so far, and what you're hoping to change. No forms to fill out. No phone tag. Just a message, the same way you'd ask a friend for a recommendation.</p>
+            <p class="step-body">A quick note about your child &#x2014; current secondary level, current grades, what you've tried so far, and what you're hoping to change. No forms to fill out. No call-backs to chase. Just a message, the same way you'd ask a friend for a recommendation.</p>
           </div>
         </div>
 
@@ -2322,9 +2327,9 @@
           </div>
         </div>
 
-        <p class="process-reassurance" data-reveal="580">If you're not sure yet, that's fine. Most parents aren't, on the first message.</p>
+        <p class="process-reassurance" data-reveal="580">If you're not sure yet, that's fine. Most parents aren't.</p>
 
-        <p class="process-coda" data-reveal="150">The next thing to know is what you'd actually be paying for.</p>
+        <p class="process-coda" data-reveal="150">The next thing to know is what it costs.</p>
       </div>
     </section>
 
@@ -2332,14 +2337,14 @@
       <div class="fees-container">
         <p class="fees-eyebrow" data-reveal="0">Programmes &amp; Fees</p>
         <h2 class="fees-headline" id="fees-heading" data-reveal="60">Two ways to learn.<br class="fees-break"> Both priced honestly.</h2>
-        <p class="fees-sub" data-reveal="120">Pricing varies by secondary level. No packages, no contracts, no hidden fees &#x2014; pay only for the lessons your child attends.</p>
+        <p class="fees-sub" data-reveal="120">Pricing varies by secondary level. Pay only for the lessons your child attends &#x2014; no packages, no contracts.</p>
 
         <div class="programmes-grid">
 
           <div class="programme-block" data-reveal="260">
             <p class="prog-name">1-to-1 Personalised Tuition</p>
             <p class="prog-tagline">For students who need individual attention</p>
-            <p class="prog-desc">One student, one teacher, one focused hour. Lessons happen at your home or online &#x2014; whichever fits your routine. Notes are customised to your child specifically, homework is hand-picked from a curated question bank, and every lesson has a clear aim. This is the programme for students who need to be seen, not managed.</p>
+            <p class="prog-desc">One student, one teacher, one focused hour. Lessons happen at your home or online &#x2014; whichever fits your routine. Notes are customised to your child specifically, homework is hand-picked from a curated question bank, and every lesson has a clear aim. This is the programme for students who need attention, not just instruction.</p>
 
             <p class="prog-subsection-label">Best for:</p>
             <div class="prog-bestfor">
@@ -2403,13 +2408,14 @@
           <div class="programme-block" data-reveal="360">
             <p class="prog-name">Intensive Focus Group</p>
             <p class="prog-tagline">For students who thrive with peers</p>
-            <p class="prog-desc">Small classes of 2&#x2013;6 students at the Bukit Batok classroom. Group lessons aren't watered-down 1-to-1 &#x2014; they're built around the energy of focused peers learning the same syllabus together. Every student gets attention, every student participates, and the classroom culture itself becomes part of the learning. Available for G3 (Express) only.</p>
+            <p class="prog-desc">Small classes of 2&#x2013;6 students at the Bukit Batok classroom. Group lessons aren't watered-down 1-to-1 &#x2014; they're built around the energy of focused peers learning the same syllabus together. Every student gets attention, every student participates, and the classroom culture itself becomes part of the learning.</p>
 
             <p class="prog-subsection-label">Best for:</p>
             <div class="prog-bestfor">
               <p class="prog-bestfor-item">&#x2013; Has decent grades but needs higher-quality instruction</p>
               <p class="prog-bestfor-item">&#x2013; Peer-motivated and thrives in a positive classroom environment</p>
               <p class="prog-bestfor-item">&#x2013; Responsible, punctual, and ready to commit to the schedule</p>
+              <p class="prog-bestfor-item">&#x2013; G3 (Express) stream students only</p>
             </div>
 
             <p class="prog-subsection-label">Per hour, by level:</p>
@@ -2452,8 +2458,8 @@
     <section class="section-faq" aria-labelledby="faq-heading">
       <div class="faq-container">
         <p class="faq-eyebrow" data-reveal="0">Questions, Answered</p>
-        <h2 class="faq-headline" id="faq-heading" data-reveal="60">What parents usually ask before reaching out.</h2>
-        <p class="faq-sub" data-reveal="120">Six questions that come up repeatedly. Honest answers &#x2014; including where the answer is &#x201C;it depends.&#x201D;</p>
+        <h2 class="faq-headline" id="faq-heading" data-reveal="60">What parents ask before reaching out.</h2>
+        <p class="faq-sub" data-reveal="120">Six questions that come up repeatedly. Honest answers &#x2014; including where the answer is &#x2018;it depends.&#x2019;</p>
 
         <div class="faq-list">
 
@@ -2537,7 +2543,7 @@
 
         </div>
 
-        <p class="faq-coda" data-reveal="200">If your question isn't here, ask it directly. The reply comes from Keith, not a script.</p>
+        <p class="faq-coda" data-reveal="200">If your question isn't here, ask it directly. The reply comes from Keith, personally.</p>
       </div>
     </section>
 
@@ -2545,7 +2551,7 @@
       <div class="final-cta-container">
         <p class="final-cta-eyebrow" data-reveal="0">One Last Thing</p>
         <h2 class="final-cta-headline" id="final-cta-heading" data-reveal="80">Send a message. See if it&#x2019;s a fit.</h2>
-        <p class="final-cta-sub" data-reveal="180">Thirteen years of teaching. Twenty-one verified five-star reviews. The next step is just a message.</p>
+        <p class="final-cta-sub" data-reveal="180">Thirteen years of teaching. Twenty-one verified reviews. The next step is just a message.</p>
         <a href="https://wa.me/6587878967" class="btn-final-cta" target="_blank" rel="noopener" aria-label="WhatsApp Keith now — opens WhatsApp" data-reveal="320">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp Keith Now &#x2192;

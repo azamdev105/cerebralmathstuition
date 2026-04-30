@@ -479,6 +479,11 @@ header.scrolled {
   color: var(--text-muted);
 }
 
+.stat-number-group {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .stat-label {
   font-family: var(--font-body);
   font-weight: 500;
@@ -1528,7 +1533,7 @@ header.scrolled {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(2rem, 4vw, 3rem);
-    align-items: stretch;
+    align-items: start;
   }
 }
 
