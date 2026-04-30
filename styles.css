@@ -1287,3 +1287,233 @@ header.scrolled {
     margin-bottom: 0;
   }
 }
+
+/* ── Fees Section ── */
+
+.section-fees {
+  background-color: var(--bg-alt);
+  padding-top: clamp(5rem, 12vh, 8rem);
+  padding-bottom: clamp(5rem, 12vh, 8rem);
+}
+
+.fees-container {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2rem);
+}
+
+.fees-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fees-headline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.875rem, 5vw, 2.75rem);
+  line-height: 1.1;
+  color: var(--text);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fees-break {
+  display: none;
+}
+
+.fees-sub {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1rem, 2.2vw, 1.125rem);
+  line-height: 1.5;
+  color: var(--text-muted);
+  max-width: 52ch;
+  margin-top: 1rem;
+  margin-bottom: clamp(3rem, 6vh, 4.5rem);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.programmes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vh, 3.5rem);
+}
+
+.programme-block {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  border-radius: 16px;
+  padding: clamp(2rem, 4vw, 2.75rem);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.prog-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3.5vw, 1.875rem);
+  line-height: 1.15;
+  color: var(--text);
+}
+
+.prog-tagline {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prog-desc {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1rem, 2.2vw, 1.0625rem);
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 1.75rem;
+}
+
+.prog-subsection-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.875rem;
+}
+
+.prog-bestfor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.prog-bestfor-item {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.prog-pricing {
+  margin-bottom: 2rem;
+}
+
+.pricing-row + .pricing-row {
+  margin-top: 1.25rem;
+}
+
+.pricing-row-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.625rem;
+}
+
+.pricing-cells {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.price-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.price-level {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.price-amount {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.prog-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  background-color: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.875rem 1.5rem;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: background-color 200ms ease-out, transform 200ms ease-out;
+  white-space: nowrap;
+}
+
+.prog-cta:hover {
+  background-color: var(--accent-hover);
+}
+
+.prog-cta:active {
+  transform: scale(0.98);
+}
+
+.prog-cta svg {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+}
+
+.fees-coda {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  line-height: 1.4;
+  color: var(--text);
+  max-width: 56ch;
+  margin-top: clamp(4rem, 8vh, 6rem);
+  margin-inline: auto;
+  text-align: center;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .fees-break {
+    display: inline;
+  }
+}
+
+@media (min-width: 1024px) {
+  .programmes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 4vw, 3rem);
+    align-items: stretch;
+  }
+}
